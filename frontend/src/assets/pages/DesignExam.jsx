@@ -22,7 +22,7 @@ export function DesignCard(){
     { id: "3", title: "Empty" },
   ];
   return (
-    <div className="flex flex-wrap gap-3 sm:grid-cols-2">
+    <div className="flex flex-wrap gap-3">
       {items.map((it) => (
         <Link
           key={it.id}
