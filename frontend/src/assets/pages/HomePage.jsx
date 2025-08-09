@@ -1,3 +1,4 @@
+// HomePage.jsx
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-lime-50">

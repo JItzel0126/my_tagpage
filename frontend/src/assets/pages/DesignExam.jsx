@@ -1,3 +1,4 @@
+// DesignExam.jsx
 import { Link } from "react-router-dom";
 
 export default function DesignExam(){
@@ -18,7 +19,7 @@ export function DesignCard(){
   // 연습 목록
   const items = [
     { id: "1", title: "HelloWorld" },
-    { id: "2", title: "GridPlay" },
+    { id: "2", title: "FlexPlay" },
     { id: "3", title: "?" },
   ];
   return (

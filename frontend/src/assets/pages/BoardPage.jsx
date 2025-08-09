@@ -1,3 +1,4 @@
+// BoardPage.jsx
 export default function BoardPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-100">

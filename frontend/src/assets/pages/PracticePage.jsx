@@ -1,5 +1,6 @@
+// PracticePage.jsx
 import { useParams, Link } from "react-router-dom";
-import { HelloWorld, GridPlay, Empty } from "./exam-cards";
+import { HelloWorld, FlexPlay, GridPlay, Empty } from "./exam-cards";
 
 export default function PracticePage(){
  // /practice 들어오면 메뉴, /practice/1이면 1번
@@ -8,7 +9,7 @@ export default function PracticePage(){
     const registry = {
     menu: { comp: Menu,       title: "메뉴" },
     "1":  { comp: HelloWorld, title: "HelloWorld" },
-    "2":  { comp: GridPlay,   title: "GridPlay" },
+    "2":  { comp: FlexPlay,   title: "FlexPlay" },
   };
 
   const entry = registry[id] ?? { comp: Empty, title: "Empty" };

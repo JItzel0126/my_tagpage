@@ -1,3 +1,4 @@
+// App.jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./assets/pages/HomePage";
 import BoardPage from "./assets/pages/BoardPage";
