@@ -13,7 +13,7 @@ export default function NavBar() {
           <div className="flex gap-1">
             <NavLink to="/" end className={({isActive}) => `${navItem} ${isActive?active:idle}`}>홈</NavLink>
             <NavLink to="/board" className={({isActive}) => `${navItem} ${isActive?active:idle}`}>게시판</NavLink>
-            <NavLink to="/exampage" className={({isActive}) => `${navItem} ${isActive?active:idle}`}>DesignExam</NavLink>
+            <NavLink to="/practice" className={({isActive}) => `${navItem} ${isActive?active:idle}`}>DesignExam</NavLink>
           </div>
         </div>
       </div>

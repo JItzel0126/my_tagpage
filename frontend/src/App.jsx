@@ -12,8 +12,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/board" element={<BoardPage />} />
-        <Route path="/exampage" element={<DesignExam />} />
-        <Route path="/Practice/:id" element={<PracticePage />} />
+        <Route path="/practice" element={<DesignExam />} />
+        <Route path="/practice/:id" element={<PracticePage />} />
       </Routes>
     </BrowserRouter>
   );

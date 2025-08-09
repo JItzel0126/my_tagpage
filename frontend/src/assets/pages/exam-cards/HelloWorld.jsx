@@ -1,15 +1,16 @@
-
+import { Link } from 'react-router-dom';
+import ExamCard from '../../components/ExamCard';
 
 export default function HelloWorld() {
   return (
-    <div className="flex flex-col items-center gap-4">
-      <div className="w-44 h-14 rounded-3xl border border-amber-100 bg-amber-200 shadow-md font-semibold text-blue-300 flex items-center justify-center">
-        hello world
-      </div>
+    <ExamCard title="Hello World" desc="텍스트 디자인 변경 연습"
+    className = "flex flex-col items-center justify-center gap-3">
+    <button onClick={() => alert('Hello World')}
+            className="w-28 h-10 mb-4 rounded-2xl border border-amber-100 bg-amber-200 shadow-md font-semibold text-blue-300 flex items-center justify-center">
+            Hello World</button>
     <div className="flex flex-col gap-4">
        {/* 기본 */}
     <div className="border p-2">
-        <div className="font-bold text-2xl mb-1">Basic</div>
       <div className="text-base font-nomal mb-1"> HelloWorld (className= text-base font-nomal) </div>
       <div>
         <b>text-base </b> (font-size: 1rem /* 16px */; line-height: 1.5rem /* 24px */;)<br />
@@ -22,13 +23,13 @@ export default function HelloWorld() {
         <b>font-size</b>: 0.875rem /* 14px */;<br />
         <b>line-height</b>: 1.25rem /* 20px */</div>
       <div className="text-lg">Hello World (className= text-lg)<br />
-        <b>font-size</b>: 1.125rem /* 14px */<br />
-        <b>line-height</b>: 1.75rem /* 20px */</div>
+        <b>font-size</b>: 1.125rem /* 18px */<br />
+        <b>line-height</b>: 1.75rem /* 28px */</div>
       <div className="text-2xl">Hello World (className= text-2xl)<br />
-        <b>font-size</b>: 1.5rem /* 14px */<br />
-        <b>line-height</b>: 2rem /* 20px */</div>
+        <b>font-size</b>: 1.5rem /* 24px */<br />
+        <b>line-height</b>: 2rem /* 32px */</div>
       <div className="text-5xl">Hello World (className= text-5xl)<br />
-        <b>font-size</b>: 3rem /* 14px */<br />
+        <b>font-size</b>: 3rem /* 48px */<br />
         <b>line-height</b>: 1 </div>
     </div>
       {/* 굵기 변화 */}
@@ -64,9 +65,10 @@ export default function HelloWorld() {
       </div>
     </div>
 
-      <Link to="/exampage" className="text-blue-600 underline">
+      <Link to="/practice" className="text-blue-600 underline">
         ← 목록으로
       </Link>
-    </div>
+    </ExamCard>
   );
 }
+

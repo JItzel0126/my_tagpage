@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { HelloWorld, GridPlay, Empty } from '../assets/exam-cards';
+import { HelloWorld, GridPlay, Empty } from "./exam-cards";
 
 export default function PracticePage(){
  // /practice 들어오면 메뉴, /practice/1이면 1번
@@ -11,7 +11,7 @@ export default function PracticePage(){
     "2":  { comp: GridPlay,   title: "GridPlay" },
   };
 
-  const entry = registry[id] ?? { comp: () => <div><Empty /></div>, title: "Empty" };
+  const entry = registry[id] ?? { comp: Empty, title: "Empty" };
   const Comp = entry.comp;
   const title = entry.title;
 
@@ -33,6 +33,7 @@ export default function PracticePage(){
 function Menu() {
   // 연습 목록
   const items = [
+    { id: "0", title: "Empty" },
     { id: "1", title: "HelloWorld" },
     { id: "2", title: "GridPlay" },
   ];

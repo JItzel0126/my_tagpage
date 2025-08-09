@@ -19,15 +19,15 @@ export function DesignCard(){
   const items = [
     { id: "1", title: "HelloWorld" },
     { id: "2", title: "GridPlay" },
-    { id: "3", title: "Empty" },
+    { id: "3", title: "?" },
   ];
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap justify-center gap-3">
       {items.map((it) => (
         <Link
           key={it.id}
           to={`/practice/${it.id}`}
-          className="w-44 h-14 rounded-2xl border-2 border-blue-950 h-14 flex items-center justify-center font-semibold hover:bg-blue-950 hover:text-white transition"
+          className="w-44 h-14 rounded-2xl border-2 border-blue-950 flex items-center justify-center font-semibold hover:bg-blue-950 hover:text-white transition"
         >
           {it.title}
         </Link>
