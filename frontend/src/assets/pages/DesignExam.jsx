@@ -18,6 +18,7 @@ export default function DesignExam(){
 export function DesignCard(){
   // 연습 목록
   const items = [
+    { id: "0", title: "SizeGuide" },
     { id: "1", title: "HelloWorld" },
     { id: "2", title: "FlexPlay" },
     { id: "3", title: "?" },
