@@ -1,6 +1,6 @@
 // PracticePage.jsx
 import { useParams, Link } from "react-router-dom";
-import { SizeGuide, HelloWorld, FlexPlay, GridPlay, Empty } from "./exam-cards";
+import { SizeGuide, HelloWorld, FlexPlay, GridPlay, BoardExam, Empty } from "./exam-cards";
 
 export default function PracticePage(){
  // /practice 들어오면 메뉴, /practice/1이면 1번
@@ -12,6 +12,7 @@ export default function PracticePage(){
     "1":  { comp: HelloWorld, title: "HelloWorld" },
     "2":  { comp: FlexPlay,   title: "FlexPlay" },
     "3":  { comp: GridPlay,   title: "GridPlay-초급" },
+    "5":  { comp: BoardExam,   title: "BoardExam" },
   };
 
   const entry = registry[id] ?? { comp: Empty, title: "Empty" };
@@ -40,6 +41,7 @@ function Menu() {
     { id: "1", title: "HelloWorld" },
     { id: "2", title: "FlexPlay" },
     { id: "3", title: "GridPlay-초급" },
+    { id: "5", title: "GBoardExam" },
   ];
   return (
     <div className="grid gap-3 sm:grid-cols-2">
