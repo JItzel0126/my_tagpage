@@ -7,9 +7,17 @@ export default function FlexPlay(){
         <ExamCard title="FlexPlay" desc="레이아웃 구조 연습"
         className = "space-y-2"
         >
+          <p className="hint mb-4 border bg-gray-50 rounded p-2"> <b>손가락에 심는 Grid 핵심 요약</b>
+          <br/> <b>className="space-y-size"</b> : 요소들의 세로 방향 간격을 지정할 때 사용
+          <br/>flex-1 = “남는 공간을 한 몸에 먹는다.”
+          <br/>grow / shrink / basis = “공간 나눠먹기 3형제”
+          <br/>“푸터 바닥 붙이기”는 부모 flex-col + 콘텐츠 flex-1 조합
+          <br/>반응형은 md:flex-row 같은 프리픽스로 방향 전환
+          <br/>줄바꿈은 flex-wrap + gap-*로 타일 느낌
+          <br/>교차축 정렬 헷갈리면: items-*는 세로축(기본 row일 때), justify-*는 가로축
+        </p>
 
-        <div className="space-y-8">
-            <div><b>className="space-y-size"</b> : 요소들의 세로 방향 간격을 지정할 때 사용 </div>
+        <div className="space-y-6">
         <Section title="① 가로/세로 전환 + 간격(gap)">
             {/* 기본: 가로 정렬 */}
             <div>className="flex flex-wrap gap-3"<br/>
@@ -72,7 +80,7 @@ export default function FlexPlay(){
                 <Panel title="Extra">보조 패널</Panel>
               </aside>
             </div>
-            <aside className='p-4'>
+            <aside className='mt-4 border bg-gray-50 rounded p-2'>
              <div>컨테이너 div = "min-h-[50vh] flex flex-col h-full"<br/>
              <b>min-h-[50vh] :</b> 요소의 최소 높이를 뷰포트 높이의 50%로 설정한다는 의미<br/>
              <b>h-full :</b> `height: 100%`와 같습니다. 즉, 요소의 높이는 해당 요소의 부모 요소의 높이를 기준으로 결정<br/>
@@ -107,10 +115,10 @@ export default function FlexPlay(){
             액션
           </button>
         </div>
-         <div>컨테이너 div = "flex items-start"<br/>
+         <div className='mb-4 border bg-gray-50 rounded p-2'>컨테이너 div = "flex items-start"<br/>
              <b>items-start :</b> 교차축(cross axis)(현재 수직축)의 시작점으로 정렬하는 역할<br/>
              심볼 className = "size-14 rounded-full shrink-0"<br/>
-             <b>size-14 :</b> 14rem. 요소의 크기를 기본 크기의 14배로 설정하는 유틸리티 클래스입니다. 주로 글자 크기, 너비, 높이를 조절할 때 사용<br/>           
+             <b>size-14 :</b> 14rem. 요소의 크기를 기본 크기의 14배로 설정하는 유틸리티 클래스입니다.(w-14/h-14) 주로 글자 크기, 너비, 높이를 조절할 때 사용<br/>           
              텍스트 className="flex-1 min-w-0" <br/>
              <b>flex-1 min-w-0 :</b> 각각 다른 역할을 하지만 함께 사용될 때 컨테이너 내의 요소의 크기 조정 및 레이아웃을 제어하는데 효과적<br/>
              flex-1은 요소가 컨테이너에서 유연하게 늘어나거나 줄어들도록 하고, min-w-0은 요소의 최소 너비를 0으로 설정하여 내용이 넘칠 때 줄어들 수 있도록 합니다. 두 클래스를 함께 사용하면, 요소가 컨테이너 너비에 유연하게 대응하면서 내용이 잘리지 않고 표시될 수 있도록 합니다.<br/>
@@ -143,7 +151,7 @@ export default function FlexPlay(){
             </div>
           ))}
         </div>
-            <div>부모 div = "flex flex-col"<br/>
+            <div className='mb-4 border bg-gray-50 rounded p-2'>부모 div = "flex flex-col"<br/>
              타이틀 div<br/>
              본문 div<br/>
              <b>(items-end)</b> 본문 아래 div className="flex-1" <br/>

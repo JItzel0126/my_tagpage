@@ -11,6 +11,7 @@ export default function PracticePage(){
     "0":  { comp: SizeGuide,  title: "SizeGuide" },
     "1":  { comp: HelloWorld, title: "HelloWorld" },
     "2":  { comp: FlexPlay,   title: "FlexPlay" },
+    "3":  { comp: GridPlay,   title: "GridPlay-초급" },
   };
 
   const entry = registry[id] ?? { comp: Empty, title: "Empty" };
@@ -37,7 +38,8 @@ function Menu() {
   const items = [
     { id: "0", title: "SizeGuide" },
     { id: "1", title: "HelloWorld" },
-    { id: "2", title: "GridPlay" },
+    { id: "2", title: "FlexPlay" },
+    { id: "3", title: "GridPlay-초급" },
   ];
   return (
     <div className="grid gap-3 sm:grid-cols-2">

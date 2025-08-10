@@ -21,7 +21,7 @@ export function DesignCard(){
     { id: "0", title: "SizeGuide" },
     { id: "1", title: "HelloWorld" },
     { id: "2", title: "FlexPlay" },
-    { id: "3", title: "?" },
+    { id: "3", title: "GridPlay-초급" },
   ];
   return (
     <div className="flex flex-wrap justify-center gap-3">
