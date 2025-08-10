@@ -29,7 +29,7 @@ export default function HomePage() {
         <section className="mt-8">
           <h3 className="text-lg font-semibold text-gray-800">최근 업데이트</h3>
           <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {["Tailwind 세팅", "라우터 연결", "게시판 UI 초안"].map((t,i)=>(
+            {["Tailwind 세팅", "라우터 연결", "DesignExam"].map((t,i)=>(
               <article key={i} className="rounded-xl bg-white border p-4 hover:shadow">
                 <h4 className="font-bold text-gray-900">{t}</h4>
                 <p className="text-sm text-gray-500 mt-1">작업 진행 중...</p>
