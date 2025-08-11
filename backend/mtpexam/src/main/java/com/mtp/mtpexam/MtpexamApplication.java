@@ -1,13 +1,13 @@
-package com.myTagPage.jpaexam;
+package com.mtp.mtpexam;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JpaexamApplication {
+public class MtpexamApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JpaexamApplication.class, args);
+		SpringApplication.run(MtpexamApplication.class, args);
 	}
 
 }

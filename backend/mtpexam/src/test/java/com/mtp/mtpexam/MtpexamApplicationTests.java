@@ -1,10 +1,10 @@
-package com.myTagPage.jpaexam;
+package com.mtp.mtpexam;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JpaexamApplicationTests {
+class MtpexamApplicationTests {
 
 	@Test
 	void contextLoads() {
