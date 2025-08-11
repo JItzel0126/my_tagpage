@@ -24,15 +24,27 @@ repositories {
 }
 
 dependencies {
+	// --- Spring Boot ---
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// --- Lombok ---
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
+	// DTO ↔ Entity 변환 라이브러리 (롬복보다 밑에 위치해야 함)
+	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+	// --- Dev Tools ---
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// --- DB ---
+	runtimeOnly 'com.h2database:h2'
+	// --- Test ---
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// 선택: @ConfigurationProperties 메타데이터 생성
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+
 }
 
 tasks.named('test') {
