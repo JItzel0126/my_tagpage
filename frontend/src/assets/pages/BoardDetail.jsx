@@ -2,10 +2,20 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
+// import.meta.env.VITE_API_BASE_URL : Vite에서 제공하는 환경 변수 접근 방식
+// Vite에서 환경 변수 이름은 VITE_로 시작해야만 클라이언트 코드에 접근 가능
+
+// import.meta.env : Vite 전용 전역 객체
+// VITE_API_BASE_URL 이라는 이름의 변수를 .env 파일에 정의해 두고 읽음
+// || - .env에 값이 있으면 그걸 쓰고, 없으면 로컬 서버 주소로 대체
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
+
+// export default function 함수 () { ... }
+// 컴포넌트가 화면에 뭘 보여줄지 정의하는 JSX 실행문
 
 export default function BaoardDetail () {
 
+  // 1. (선택) 변수, 상태, 훅, 데이터 패치 로직
   const { id } = useParams();
 
   const [post, setPost] = useState(null);
@@ -59,7 +69,9 @@ export default function BaoardDetail () {
   if (loading) return <div className='p-4'>로딩중_</div>;
   if (err)     return <div className="p-4 text-rose-600">{err}</div>;
   if (!post)   return <div className="p-4">데이터가 없어요.</div>;
-  
+
+  // 2. return 안 = 실제로 브라우저에 렌더링할 JSX
+  //  JSX는 HTML처럼 보이지만 JavaScript 안에서 쓰는 XML 문법. 안의 태그들은 DOM에 렌더링.
   return(
      <section className="min-h-[85vh] flex flex-col overflow-hidden border-2 border-slate-100 bg-white shadow-sm">
       <header className="bg-slate-200 text-zinc-600 p-3 space-y-2">
