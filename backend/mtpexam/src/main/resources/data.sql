@@ -62,3 +62,5 @@ INSERT INTO post_comment (id, board_exam_id, writer, content, created_at, update
 INSERT INTO post_comment (id, board_exam_id, writer, content, created_at, updated_at) VALUES
                                                                                           (20, 10, '운영자', '열 번째 글의 첫 댓글', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
                                                                                           (21, 10, '관리자', '열 번째 글의 두 번째 댓글', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+-- 기존 INSERT들 아래에 추가
+ALTER TABLE post_exam ALTER COLUMN id RESTART WITH 11;

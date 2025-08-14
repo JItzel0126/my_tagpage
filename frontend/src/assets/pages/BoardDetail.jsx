@@ -87,8 +87,7 @@ export default function BaoardDetail () {
                     <span className="ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-600">
                     💬 {post.commentCount} </span>
                     )}
-        </h2>
-        
+        </h2>        
       </header>
 
       <main className="min-h-[70vh] flex-1 p-4">
@@ -125,18 +124,24 @@ export default function BaoardDetail () {
           </ul>
         )}
 
-         {/* 댓글 페이징(간단) */}
+         {/* 댓글 페이징 */}
+              {/* 댓글이 4개 미만일 때만 표시 */}
          {cTotalPages > 1 && (
         <div className="mt-4 flex items-center justify-end gap-2 px-4 pb-4">
+              {/* 처음 */}
           <button onClick={()=>setCPage(0)} disabled={cPage===0}
             className="rounded-lg border px-1 py-1 bg-white disabled:opacity-50">처음</button>
+              {/* 이전 */}
           <button onClick={()=>setCPage(p=>Math.max(0,p-1))} disabled={cPage===0}
             className="rounded-full border px-1 py-1 bg-white disabled:opacity-50">이전</button>
+              {/* 댓글페이지 */}
           <span className="text-sm text-slate-600">
             {cPage+1}/{cTotalPages} 페이지 · 총 {cTotal}개
           </span>
+              {/* 다음 */}
           <button onClick={()=>setCPage(p=>Math.min(cTotalPages-1,p+1))} disabled={cPage>=cTotalPages-1}
             className="rounded-full border px-1 py-1 bg-white disabled:opacity-50">다음</button>
+              {/* 끝 */}
           <button onClick={()=>setCPage(cTotalPages-1)} disabled={cPage>=cTotalPages-1}
             className="rounded-lg border px-1 py-1 bg-white disabled:opacity-50">끝</button>
         </div>

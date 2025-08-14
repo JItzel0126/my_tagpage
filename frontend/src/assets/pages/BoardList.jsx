@@ -56,10 +56,12 @@ export default function BoardList(){
     try{
       setLoading(true);
       setErr("");
-      const qs = new URLSearchParams({ page, size, keyword }).toString();
+      const qs = new URLSearchParams({ page, size, keyword });
+      qs.append('sort','id,desc');
+      // qs.append('sort','creaedAt,desc'); // ← 생성일 최신순으로 바꾸고 싶으면 이거
 
       // 경로 수정: /api/boards -> /api/posts
-      const res = await fetch(`${BASE_URL}/api/posts?${qs}`);
+      const res = await fetch(`${BASE_URL}/api/posts?${qs.toString()}`);
       if(!res.ok) throw new Error(`HTTP ${res.status}`);
 
       // Spring page
@@ -105,10 +107,16 @@ export default function BoardList(){
       <div className="mx-auto max-w-5xl">
         <header className="mb-5 flex items-center justify-between">
           <h1 className="text-2xl font-bold">게시판 목록</h1>
-          <Link to="/practice" className="text-blue-600 underline">
-        ← 게시판 연습
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/practice/5" className="rounded-lg border px-3 py-1.5 bg-white hover:bg-slate-50">
+              게시판 연습
+            </Link>
           {/* 다음 단계에서 /boards/new로 이동 버튼 추가 예정 */}
+            <Link to="/boards/new" className="rounded-lg border px-3 py-1.5 bg-white hover:bg-slate-50">
+              글쓰기
+            </Link>
+          </div>
+
         </header>
 
         {/* 검색 */}
@@ -157,7 +165,8 @@ export default function BoardList(){
                   데이터가 없어요.
                 </td></tr>
               )}
-              {items.map((row) => (
+              {items
+              .map((row) => (
                 <tr key={row.id} className="border-t hover:bg-slate-50">
                    {/* id */}
                   <td className="px-4 py-3">{row.id}</td>
@@ -229,3 +238,8 @@ export default function BoardList(){
     </div>
   );
 }
+
+{/* .slice() 배열 복사, 원본 훼손 방지
+              // 날짜 최신순
+              // .sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt))
+              // .sort((a, b) => b.id - a.id) // id 큰 순 → 작은 순 */}
