@@ -13,7 +13,7 @@ const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
 // export default function 함수 () { ... }
 // 컴포넌트가 화면에 뭘 보여줄지 정의하는 JSX 실행문
 
-export default function BaoardDetail () {
+export default function BoardDetail () {
 
   // 1. (선택) 변수, 상태, 훅, 데이터 패치 로직
   const { id } = useParams();
@@ -28,6 +28,29 @@ export default function BaoardDetail () {
   const cSize = 3;
   const [cTotal, setCTotal] = useState(0);
   const [cTotalPages, setCTotalPages] = useState(1);
+
+  const [deleting, setDeleting] = useState(false);
+
+  async function handleDelete() {
+    if(!window.confirm("정말 삭제할까요? 복구가 어려워요 🥲")) return;
+
+    try {
+    setDeleting(true);
+    const res = await fetch(`${BASE_URL}/api/posts/${id}`, { method: 'DELETE' });
+    if (!res.ok) {
+      const msg = await res.text();
+      throw new Error(msg || `HTTP ${res.status}`);
+    }
+    // 성공 → 목록으로
+    window.location.href = "/boards"; 
+  } catch (e) {
+    console.error(e);
+    alert(`삭제 실패 ㅠㅠ (${e.message})`);
+    setDeleting(false);
+  }
+    
+  }
+
 // 글상세
   useEffect(() => {
     (async () => {
@@ -97,9 +120,17 @@ export default function BaoardDetail () {
       </main>
 
       <footer className="h-12 bg-blue-50 text-blue-900 flex items-center gap-2 px-4">
-        <Link to="/board" className="rounded px-3 py-1.5 bg-white border">목록</Link>
-        <button className="rounded px-3 py-1.5 bg-white border">수정</button>
-        <button className="rounded px-3 py-1.5 bg-white border">삭제</button>        
+        <Link to="/boards" className="rounded px-3 py-1.5 bg-white border">목록</Link>
+        <Link to={`/boards/${post.id}/edit`} className="rounded px-3 py-1.5 bg-white border hover:bg-yellow-500 hover:text-slate-50">수정</Link>
+
+        {/* 삭제 */}
+
+        <button 
+        onClick={handleDelete}
+        disabled= {deleting}
+        className="rounded px-3 py-1.5 bg-white border hover:bg-red-500 hover:text-slate-50">
+          {deleting ? "삭제중..." : "삭제"}
+          </button>        
       </footer>
 
       {/* 코멘트 영역 */}

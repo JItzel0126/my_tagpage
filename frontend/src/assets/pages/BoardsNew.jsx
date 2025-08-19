@@ -51,7 +51,7 @@ export default function BoardsNew () {
       <div className="mx-auto max-w-3xl">
         <header className="mb-5 flex items-center justify-between">
           <h1 className="text-2xl font-bold">새 글 작성</h1>
-          <Link to="/boards" className="text-blue-600 underline">← 목록</Link>
+          <Link to="/boards" className="text-blue-600 underline">목록</Link>
         </header>
 
         <form onSubmit={handleSubmit} className="rounded-2xl bg-white p-5 shadow space-y-4">
@@ -101,7 +101,8 @@ export default function BoardsNew () {
               {saving ? '저장 중…' : '저장'}
             </button>
             {/* 취소 */}
-            <Link to="/board" className="rounded-lg border px-4 py-2 bg-white hover:bg-slate-50">
+            <Link to="/boards"
+            className="rounded-lg border px-4 py-2 bg-white hover:bg-slate-50">
               취소
             </Link>
           </div>

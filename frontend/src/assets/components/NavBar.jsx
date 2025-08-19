@@ -13,7 +13,7 @@ export default function NavBar() {
           <Link to="/" className="text-lime-300 font-bold">my_tagpage</Link>
           <div className="flex gap-1">
             <NavLink to="/" end className={({isActive}) => `${navItem} ${isActive?active:idle}`}>홈</NavLink>
-            <NavLink to="/board" className={({isActive}) => `${navItem} ${isActive?active:idle}`}>게시판</NavLink>
+            <NavLink to="/boards" className={({isActive}) => `${navItem} ${isActive?active:idle}`}>게시판</NavLink>
             <NavLink to="/practice" className={({isActive}) => `${navItem} ${isActive?active:idle}`}>DesignExam</NavLink>
           </div>
         </div>
