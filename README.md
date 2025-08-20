@@ -15,6 +15,7 @@ React + Spring Boot CRUD 학습 프로젝트
 ---
 
 ## 📂 프로젝트 구조
+<pre>
 my_tagpage/
 ├─ backend/mtpexam
 │ ├─ controller # REST API 컨트롤러
@@ -26,7 +27,7 @@ my_tagpage/
 ├─ src/assets/pages # BoardList, BoardDetail, BoardsNew
 ├─ src/assets/components # 재사용 컴포넌트
 └─ .env # VITE_API_BASE_URL 설정
-
+</pre>
 
 ---
 
