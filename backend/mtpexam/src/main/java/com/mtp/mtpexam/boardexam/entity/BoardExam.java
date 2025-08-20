@@ -16,6 +16,7 @@ import lombok.*;
 @Builder
 public class BoardExam extends BaseTimeEntity {
     @Id
+//    INSERT 할 때 데이터베이스가 자동으로 키 생성
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false, length = 160)
