@@ -92,7 +92,17 @@ React 개발 서버: http://localhost:5173
 ## 📸 스크린샷
 
 ### 메인 화면
-![메인 화면](docs/screenshot.png)
+![메인 화면](docs/scshot_1.png)
+
+### 게시판 목록
+![게 시 판](docs/scshot_2.png)
+
+### DesignExam 목록
+![DesignExam](docs/scshot_3.png)
+
+### Practice Page
+![SizeGuide](docs/scshot_4.png)
+
 
 ## 👤 작성자
 - **이름/닉네임**: JItzel 
