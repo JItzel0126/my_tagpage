@@ -3,6 +3,10 @@ React + Spring Boot CRUD 학습 프로젝트
 
 > React + Spring Boot를 연결하여 CRUD(등록/조회/수정/삭제) 기능을 구현한 학습용 프로젝트입니다.  
 > 학습 블로그/포트폴리오 용도로 제작했습니다.
+>
+![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react)
+![Spring Boot](https://img.shields.io/badge/Backend-Spring%20Boot-6DB33F?logo=springboot)
+![H2](https://img.shields.io/badge/Database-H2-blue)
 
 ---
 
@@ -84,3 +88,13 @@ React 개발 서버: http://localhost:5173
 - [ ] JWT 로그인/회원 인증
 - [ ] Tailwind UI 적용으로 블로그 스타일 디자인 개선
 - [ ] 학습 기록 페이지(React + Markdown 렌더)
+
+## 📸 스크린샷
+
+### 메인 화면
+![메인 화면](docs/screenshot.png)
+
+## 👤 작성자
+- **이름/닉네임**: JItzel 
+- **GitHub**: [github.com/JItzel0126](https://github.com/JItzel0126)
+- **Email**: kikiroro1506@gmail.com
