@@ -51,31 +51,31 @@ my_tagpage/
 ## 🖥 실행 방법
 
 ### 1) 백엔드 실행
-
-`cd backend/mtpexam`
-`./gradlew bootRun`
-
-`서버: http://localhost:8080`
-`H2 콘솔: http://localhost:8080/h2-console`
-`JDBC URL: jdbc:h2:mem:testdb`
+<pre>
+cd backend/mtpexam
+./gradlew bootRun
+</pre>
+- 서버: http://localhost:8080
+- H2 콘솔: http://localhost:8080/h2-console
+- JDBC URL: jdbc:h2:mem:testdb
 
 
 ### 2) 프론트 실행
-
-`cd frontend`
-`echo VITE_API_BASE_URL=http://localhost:8080 > .env`
-`npm install`
-`npm run dev`
-
+<pre>
+cd frontend
+echo VITE_API_BASE_URL=http://localhost:8080 > .env
+npm install
+npm run dev
+</pre>
 React 개발 서버: http://localhost:5173
 
 
 ## 📖 학습 포인트
 
-React와 Spring Boot를 REST API로 분리해 CRUD 구현에 익숙해지기
-H2 데이터베이스를 사용해 빠르게 실습 환경 세팅
-프론트엔드와 백엔드 간 연결 과정(CORS, fetch API, JSON 데이터 처리) 학습
-프로젝트를 기반으로 학습 블로그/포트폴리오 페이지로 확장 가능
+- React와 Spring Boot를 REST API로 분리해 CRUD 구현에 익숙해지기
+- H2 데이터베이스를 사용해 빠르게 실습 환경 세팅
+- 프론트엔드와 백엔드 간 연결 과정(CORS, fetch API, JSON 데이터 처리) 학습
+- 프로젝트를 기반으로 학습 블로그/포트폴리오 페이지로 확장 가능
 
 ## 🔮 앞으로 추가할 기능
 
