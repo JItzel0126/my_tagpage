@@ -2,7 +2,7 @@
 React + Spring Boot CRUD 학습 프로젝트  
 
 > React + Spring Boot를 연결하여 CRUD(등록/조회/수정/삭제) 기능을 구현한 학습용 프로젝트입니다.  
-> 학습 블로그/포트폴리오 용도로 제작했습니다.
+> 학습 블로그 용도로 제작했습니다.
 >
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react)
 ![Spring Boot](https://img.shields.io/badge/Backend-Spring%20Boot-6DB33F?logo=springboot)
